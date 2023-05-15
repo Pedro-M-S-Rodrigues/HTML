@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Camadas e Protocolos</h1>
+
+    <h3>Camadas</h3>
+    <p>O processo de comunicação entre duas aplicações executadas em equipamentos diferentes obriga à observação de um conjunto de requisitos para que a comunicação se possa efetivar de forma precisa,segura e livre erros.
+        Aspetos de transmissão como o tipo de transmissão,sinalização de bits,deteção e correção de erros,encaminhamento das mensagens desde a origem até ao destino,a sintaxe e a semântica da informação têm de ser observados de forma a não comprometer a transmissão.
+        Para ser mais fácil maioria das redes de computadores são estruturadas em camadas e são construidas umas sobre as outras e cada uma desempenha uma função específica no processo de comunicação e uma camada recebe serviços da camada inferior e fornece as superiores.
+    </p>
+
+    <h2>No modelo OSI têm estas camadas:</h2>
+
+    <h3>Camada 1-Camada Fisica</h3>
+    <p>A  camada fisica faz a conversão de bits da camada 2 em sinais de tensão,corrente,ondas eletromagnéticas ou opticas e ainda é responsável pela alteracão dos sinais para ser transportado pelo meio físico.
+        Os componentes que fazem parte desta camada são cabos,fichas,repetidores e hubs.
+    </p>
+
+    <h3>Camada 2-Ligação de dados</h3>
+    <p>Responsável pela activação, desactivação e manutenção de uma ligação de dados. Exerce controlo de fluxo e de erros (em caso de ligação fiável) e ainda o encapsulamento de dados em tramas de transmissão. São exemplos de alguns protocolos desta camada o PPP (Point-to-Point Protocol) e o LAPB (x.25). Esta camada está por vezes dividida em duas sub-camadas:
+        • LLC - Que realiza o controlo lógico da ligação como controlo de erros e fluxo; 
+        • MAC - Que realiza o controlo de acesso ao meio.
+    </p>
+
+    <h3>Camada 3-Rede</h3>
+    <p>Esta camada é a responsável pela transferência de informação. Opera basicamente com endereços de rede IP. Ela é responsável pelo encaminhamento dos pacotes através da rede (nos routers) e é completamente independente do meio de transmissão, garantindo a transmissão através de redes heterogéneas. Os protocolos de rede desta camada são o IP e IPX.</p>
+
+    <h3>Camada 4-Transporte</h3>
+    <p>Esta camada é responsável pela transferência de informacão de extremo a extremo e também separa as camadas físicas(camada 1, 2 e 3) e as de aplicação(camada 5, 6 e 7) e pode também realizar controlo de erros.
+        Os protocolos utilizados são:
+        -TCP(Transmission Control Protocol) em que é orientado à ligação e é fiável porque tem controlo de erros e ordena.
+        -UDP(User Datagram Protocol) é um protocolo sem ligação e não é fiavel porque o pacote pode chegar ao destino ou não e pode chegar desordenado ou duplicado e o emissor não apercebe.
+    </p>
+
+    <h3>Camada 5-Sessão</h3>
+    <p>Responsável por sincronizar o diálogo entre o emissor e o receptor (modo simplex, half-duplex ou full-duplex) e pelo restabelecimento automático de ligações.</p>
+
+    <h3>Camada 6-Apresentação</h3>
+    <p>Camada responsável pela interação entre as camadas 5 e 7. Serve de conversor de (camada 5 para camada 7) ou para (camada 7 para a camada 5) o formato universal.</p>
+
+    <h3>Camada 7-Aplicação</h3>
+    <p>Camada final que fornece os mecanismos de comunicação de alto nível às aplicações. Responsável pela interface entre o protocolo de comunicação e a aplicação utilizada pela rede.</p>
+
+    <h2>As camadas que fazem parte do Modelo TCP/IP são:</h2>
+
+    <h3>Camada 1-Interface de Rede</h3>
+    <p>Esta camada é equivalente às camadas 1 e 2 do modelo OSI, recebe os datagramas vindos da camada 2 e envia-os em forma de quadros através da rede.</p>
+
+    <h3>Camada 2-Internet</h3>
+    <p>Equivale à camada de rede do modelo OSI. Os protocolos que operam nesta camada são o IP(Internet Protocol), ICMP(Internet Control Message Protocol), ARP(Address Resolution Protocol) e RARP(Reverse Address Resolution Protocol).
+        Os pacote recebidos da camada 3 são dividos em datagramas e enviados para a camada 1 e também é responsável em adicionar aos datagramas informações referentes ao caminho a percorrer na rede.
+    </p>
+
+    <h3>Camada 3-Transporte</h3>
+    <p>É responsável em transportar a mensagem da camada aplicação e enviá-los para a camada internet e são utilizados os protocolos TCP e UDP.</p>
+    
+    <h3>Camada 4-Aplicação</h3>
+    <p>Corresnponde as camadas 5, 6 e 7 do modelo OSI e faz a comunição entre as aplicações e o protocolo de transporte e o protocolos mais importantes são:
+        TP (SimpleMail Transfer Protocol) - protocolo para enviar mensagens de e-mail entre utilizadores da Internet; 
+        DNS (Domain Name Server) -ligação entre domínios e endereços IP; 
+        HTTP (Hiper Text Transfer Protocol) - protocolo utilizado para a transferência de dados na WWW (World Wide Web);
+        FTP (File Transfer Protocol) - protocolo de transferência de ficheiros na Internet; 
+        Telnet (Terminal Emulation) - programa de comunicações usado para ligar um computador a um servidor ou equipamento remoto
+        FTP (File Transfer Protocol) - protocolo de transferência de ficheiros na Internet; 
+        Telnet (Terminal Emulation) - programa de comunicações usado para ligar um computador a um servidor ou equipamento remoto.
+        Esta camada comunica com a camada de transporte através de portas e utilizam normalmente a mesmas portas consoante a sua natureza.
+        Neste modelo os serviços podem ser fornecidos a camadas não adjacentes
+    </p>
+
+    <h2>Protocolo</h2>
+    <p>Um protocolo de rede é parecido com o protocolo humano mas a diferença é quem troca mensagem e realizam ações são componentes de hardware ou software.
+       Um protocolo define o formato e a ordem das mensagens trocadas entre duas ou mais entidades comunicantes,bem como as ações realizadas na transmissão e no recebimento de uma mensagem ou outro evento.
+    </p>
+
+    <h2>Protocolo de Rede</h2>
+    <p>Funciona como uma espécie de lingua universal entre computadores e assim não é necessário usar qualquer tipo de software extra</p>
+
+    <h2>Diagramas de Encaminhamento</h2>
+    <p>Os pacotes de dados podem seguir vários caminhos e existem três formas de encaminhar pacotes numa rede:
+        Broadcast-Um para todos em simultâneo
+        Multicast-Um para muitos em simultâneo e esta técnica é muito importante para prevenir sobrecarga na rede
+        Unicast-Um para um é estabelecida uma ligação ponto a ponto
+    </p>
+
+    
+</body>

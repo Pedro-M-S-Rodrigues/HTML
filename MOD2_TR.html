@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Topologias de Rede</h1>
+    <h3>Topologias de rede representam a forma como os computadores estão ligados entre si fisicamente na rede e como os dados circulam nessa mesma rede</h3>
+
+    <h2>Topologias Físicas</h2>
+    <h3>Malha(Mesh)</h3>
+    <p>Quando enviamos um pacote de dados,ele vai percorrer um de muitos caminhos alternativos até ao destino.Se voltamos a enviar o mesmo pacote para o mesmo destino ele vai percorrer outro caminho
+        Vantagens-caso haja problemas num dos troços,aumenta a probabilidade de chegar ao destino.
+        Desvantagen-maior complexidade da rede e do preço do equipamento de interligação nos nós.
+    </p>
+
+    <h3>Anel(Ring)</h3>
+    <p>Os nós da rede são ligados entre si formando um anel e os sinais circulam dentro anel e passam sequencialmente de computador em computador
+        Vantagens-dificilmente ocorrem colisões
+        Desvantagens-A fiabilidade porque uma interrupção no anel torna inoperacional a comunicação entre nós da rede e para isso recorre-se a topologia em duplo anel.
+    </p>
+
+    <h3>Barramento(bus)</h3>
+    <p>Todos os nós da rede estão ligados ao mesmo meio físicos partilhado,já foi muito utilizada em redes Lan e eram utilizados cabos coaxiais fino (10base2),o cabo coaxial grosso(10base5),bem como fichas BNC e terminadores
+        Vantagens-necessidade de pouco equipamento,ligações fáceis de implementar,facilidade de inserir um novo computador na rede;menos cabos em relação à topologia em estrela
+        Desvantagens-velociade da rede diminui com o aumento de computadores na rede, os problemas do meio físico refletam no desempenho da rede,a rede colapsa se cabo principal tenha problemas,terminadores requeridos nas pontas do cabo principal,difícil identificação do problema caso a rede venha a apresentar falhas
+    </p>
+
+    <h3>Estrela(star)</h3>
+    <p>É a topologia mais utilizada em redes LAN em que cada computador sai um cabo de pares entrançados para um switch
+        Vantagens-problemas numa ligação não reflete na comunicação global,baixo custo dos switchs,fácil instalação e cablagem,não há alteração na rede quando se instala ou se retira um dispositivo,fácil deteção de falhas
+        Desvantagens-grande quantidade de cabos,necessidade de equipamento de interligação,número limitado de portas do switch,a distância máxima é de 100 metros,se o concentrador falhar,o cabo de pares entrançados é mais caro que o cabo coaxial.
+    </p>
+
+    <h3>Espinha dorsal</h3>
+    <p>Esta topologia é composta por um barramento ligado a redes com outras topologias fisicas,com o auxílio de um transceiver.</p>
+
+    <h3>Árvore</h3>
+    <p>Esta topologia é muito utilizada em redes mais modernas com muito computadores e é formada por várias estrelas conectadas entre si</p>
+
+    <h3>Mista</h3>
+    <p>Esta é topologia resulta na combinação de duas ou mais topologias de rede e por causa disso pode beneficiar das vantagens de cada uma das topologias que a integram é muito usada na Internet e em algumas WAN e pode ter múltiplas ligações entre várias localizações.</p>
+
+    <h2>Topologias Lógicas</h2>
+    <h3>Este tipo de topologias indicam como os sinais circulam numa rede informática entre os diversos dispositivos e foram criadas porque algumas topologias físicas apresentavam problemas nomeadamente relacionados com fiabilidade.</h3>
+
+    <h3>Lógica em barramento(com topologia física em estrela)</h3>
+    <p>Os dados dentro da rede com topologia em barramento circulam em difusão e faz uso do equipamento hub para interligar os outros equipamentos, para isto funcionar não podem 2 computadores enviar dados ao mesmo tempo e têm enviar um de cada vez e só um computador recolhe e os outros ficam à "escuta" e hub contém no seu interior um barramento causando assim uma diminuição da eficiência na presença de múltiplos pedidos</p>
+
+    <h3>Lógica em anel(com topologia física em estrela)</h3>
+    <p>Quando um computador transmite dados, estes vão circular pela rede de nó em nó ou seja,de computador em computador, em que os dados vão passando de computador a computador se os dados não forem para ele transmite novamente até chegar ao computador certo e após a receção dos dados, este envia uma mensagem de confirmação para o computador emissor
+        Nesta topologia não existe colisões por causa do sinal que circula na rede que é o token em que o computador só inicia uma transmissão após receber esse testemunho.
+    </p>
+
+    <h2>Topologias de redes sem fios(wireless)</h2>
+    <h3>As redes sem fios são cada vez mais utilizadas e ao contrário dos anteriores não existem elemento físicos a interligar os computadores mas sim uma zona cobertura onde é possivel captar os sinais da rede</h3>
+
+    <h3>Estruturada</h3>
+    <p>Os computadores ligam-se a um Access Point que controla todo o tráfego da rede.O AP está ligado a uma rede e difunde o acesso a esta através de uma zona de cobertura normalmente uniforme e circular.</p>
+
+    <h3>AdHoc</h3>
+    <p>Nesta topologia,os diversos computadores de rede estão ligados entre si formando uma rede,não existe AP e cada computador funciona como AP sendo responsável por controlar o seu tráfego de rede. Os computadores para pertencerem a uma rede Ad-Hoc têm de estar na zona de alcance uns dos outros.</p>
+</body>
